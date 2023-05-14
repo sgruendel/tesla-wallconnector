@@ -117,7 +117,7 @@ const vitals = new mongoose.Schema({
     autoCreate: true,
     timestamps: true,
 });
-vitals.index({ symbol: 1, date: -1}, { unique: true });
+vitals.index({ createdAt: 1 }, { unique: true });
 exports.Vitals = mongoose.model('Vitals', vitals);
 
 /*
@@ -177,5 +177,5 @@ const lifetime = new mongoose.Schema({
     autoCreate: true,
     timestamps: true,
 });
-lifetime.index({ symbol: 1, date: -1}, { unique: true });
+lifetime.index({ createdAt: 1 }, { unique: true });
 exports.Lifetime = mongoose.model('Lifetime', lifetime);
