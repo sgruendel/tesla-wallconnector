@@ -15,7 +15,7 @@ const logger = winston.createLogger({
 
 const db = require('./db');
 
-const BASE_URL = 'http://192.168.7.131/api/1/';
+const BASE_URL = 'http://' + process.env.TESLAWC + '/api/1/';
 
 async function getVitals() {
     logger.debug('reading vitals from wc ...');
