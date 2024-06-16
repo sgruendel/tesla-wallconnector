@@ -1,11 +1,8 @@
-'use strict';
+import * as mongoose from 'mongoose';
 
-const mongoose = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1:27017/tesla-wallconnector');
 
-var exports = (module.exports = {});
-
-exports.disconnect = mongoose.disconnect;
+export { disconnect } from 'mongoose';
 
 const vitals = new mongoose.Schema(
     {
@@ -120,7 +117,7 @@ const vitals = new mongoose.Schema(
     },
 );
 vitals.index({ createdAt: 1 }, { unique: true });
-exports.Vitals = mongoose.model('Vitals', vitals);
+export const Vitals = mongoose.model('Vitals', vitals);
 
 /*
 contactor_cycles: 56,
@@ -183,4 +180,4 @@ const lifetime = new mongoose.Schema(
     },
 );
 lifetime.index({ createdAt: 1 }, { unique: true });
-exports.Lifetime = mongoose.model('Lifetime', lifetime);
+export const Lifetime = mongoose.model('Lifetime', lifetime);

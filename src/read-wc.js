@@ -1,19 +1,26 @@
-'use strict';
-
-const fetch = require('node-fetch');
-const winston = require('winston');
+import fetch from 'node-fetch';
+import winston from 'winston';
 
 const logger = winston.createLogger({
-    level: process.env.LOG_LEVEL || 'debug',
+    level: process.env.LOG_LEVEL || 'info',
     transports: [
         new winston.transports.Console({
-            format: winston.format.simple(),
+            format: winston.format.combine(
+                winston.format.timestamp({
+                    format: 'YYYY-MM-DD HH:mm:ss:SSS',
+                }),
+                winston.format.printf(
+                    (info) =>
+                        `${info.timestamp} ${info.level}: ${info.message}` +
+                        (info.splat !== undefined ? `${info.splat}` : ' '),
+                ),
+            ),
         }),
     ],
     exitOnError: false,
 });
 
-const db = require('./db');
+import * as db from './db.js';
 
 const BASE_URL = 'http://' + process.env.TESLAWC + '/api/1/';
 
