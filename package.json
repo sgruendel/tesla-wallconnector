@@ -29,8 +29,8 @@
         "winston": "^3.17.0"
     },
     "devDependencies": {
-        "@types/node": "^22.13.9",
-        "eslint": "^9.21.0",
+        "@types/node": "^22.13.10",
+        "eslint": "^9.22.0",
         "eslint-config-strongloop": "^2.1.0"
     },
     "eslintConfig": {
