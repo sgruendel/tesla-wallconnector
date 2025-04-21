@@ -181,3 +181,31 @@ const lifetime = new mongoose.Schema(
 );
 lifetime.index({ createdAt: 1 }, { unique: true });
 export const Lifetime = mongoose.model('Lifetime', lifetime);
+
+const session = new mongoose.Schema(
+    {
+        start_date: {
+            type: Date,
+            required: true,
+        },
+        end_date: {
+            type: Date,
+            required: true,
+        },
+        uptime_s: {
+            type: Number,
+            required: true,
+        },
+        session_energy_wh: {
+            type: Number,
+            required: true,
+        },
+    },
+    {
+        autoCreate: true,
+        timestamps: false,
+    },
+);
+session.index({ start_date: 1 }, { unique: true });
+session.index({ end_date: 1 }, { unique: true });
+export const Session = mongoose.model('Session', session);
