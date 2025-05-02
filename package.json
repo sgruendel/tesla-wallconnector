@@ -24,13 +24,13 @@
     },
     "homepage": "https://github.com/sgruendel/tesla-wallconnector#readme",
     "dependencies": {
-        "mongoose": "^8.13.2",
+        "mongoose": "^8.14.1",
         "node-fetch": "^3.3.2",
         "winston": "^3.17.0"
     },
     "devDependencies": {
-        "@types/node": "^22.14.1",
-        "eslint": "^9.25.0",
+        "@types/node": "^22.15.3",
+        "eslint": "^9.25.1",
         "eslint-config-strongloop": "^2.1.0"
     },
     "eslintConfig": {
