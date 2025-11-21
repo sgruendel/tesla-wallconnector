@@ -24,7 +24,7 @@
     },
     "homepage": "https://github.com/sgruendel/tesla-wallconnector#readme",
     "dependencies": {
-        "mongoose": "^8.19.3",
+        "mongoose": "^8.20.0",
         "node-fetch": "^3.3.2",
         "winston": "^3.18.3"
     },
