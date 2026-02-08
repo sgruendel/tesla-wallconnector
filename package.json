@@ -29,37 +29,9 @@
         "winston": "^3.19.0"
     },
     "devDependencies": {
-        "@types/node": "^24.10.11",
+        "@eslint/js": "^10.0.1",
+        "@types/node": "^24.10.12",
         "eslint": "^10.0.0",
-        "eslint-config-strongloop": "^2.1.0"
-    },
-    "eslintConfig": {
-        "parserOptions": {
-            "ecmaVersion": 2023,
-            "sourceType": "module"
-        },
-        "extends": "strongloop",
-        "env": {
-            "es6": true,
-            "node": true,
-            "mocha": true
-        },
-        "rules": {
-            "indent": [
-                "error",
-                4
-            ],
-            "max-len": [
-                "error",
-                120,
-                4,
-                {
-                    "ignoreComments": true,
-                    "ignoreUrls": true,
-                    "ignoreStrings": true,
-                    "ignorePattern": "^\\s*var\\s.+=\\s*(require\\s*\\()|(/)"
-                }
-            ]
-        }
+        "globals": "^17.3.0"
     }
 }
