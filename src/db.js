@@ -1,6 +1,8 @@
 import * as mongoose from 'mongoose';
 
-mongoose.connect('mongodb://127.0.0.1:27017/tesla-wallconnector');
+if (process.env.DB_CONNECT !== 'false') {
+    mongoose.connect('mongodb://127.0.0.1:27017/tesla-wallconnector');
+}
 
 export { disconnect } from 'mongoose';
 

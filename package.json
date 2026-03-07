@@ -1,37 +1,37 @@
 {
-    "name": "tesla-wallconnector",
-    "version": "1.0.0",
-    "description": "Logging Tesla Wall Connector data with mongodb",
-    "main": "read-wc.js",
-    "type": "module",
-    "scripts": {
-        "reinstall": "rm -rf ./node_modules && npm install",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/sgruendel/tesla-wallconnector.git"
-    },
-    "keywords": [
-        "tesla",
-        "wallconnector",
-        "mongodb"
-    ],
-    "author": "Stefan Gründel",
-    "license": "GPL-3.0",
-    "bugs": {
-        "url": "https://github.com/sgruendel/tesla-wallconnector/issues"
-    },
-    "homepage": "https://github.com/sgruendel/tesla-wallconnector#readme",
-    "dependencies": {
-        "mongoose": "^9.2.4",
-        "node-fetch": "^3.3.2",
-        "winston": "^3.19.0"
-    },
-    "devDependencies": {
-        "@eslint/js": "^10.0.1",
-        "@types/node": "^24.12.0",
-        "eslint": "^10.0.2",
-        "globals": "^17.4.0"
-    }
+  "name": "tesla-wallconnector",
+  "version": "1.0.0",
+  "description": "Logging Tesla Wall Connector data with mongodb",
+  "main": "read-wc.js",
+  "type": "module",
+  "scripts": {
+    "reinstall": "rm -rf ./node_modules && npm install",
+    "test": "node --env-file=.env.local src/read-wc.js --test-mode"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgruendel/tesla-wallconnector.git"
+  },
+  "keywords": [
+    "tesla",
+    "wallconnector",
+    "mongodb"
+  ],
+  "author": "Stefan Gründel",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/sgruendel/tesla-wallconnector/issues"
+  },
+  "homepage": "https://github.com/sgruendel/tesla-wallconnector#readme",
+  "dependencies": {
+    "mongoose": "^9.2.4",
+    "node-fetch": "^3.3.2",
+    "winston": "^3.19.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.12.0",
+    "eslint": "^10.0.2",
+    "globals": "^17.4.0"
+  }
 }
