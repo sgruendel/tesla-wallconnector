@@ -62,7 +62,15 @@ const vitals = new mongoose.Schema(
         },
         relay_coil_v: {
             type: Number,
-            required: true,
+            required: false,
+        },
+        relay_k1_v: {
+            type: Number,
+            required: false,
+        },
+        relay_k2_v: {
+            type: Number,
+            required: false,
         },
         pcba_temp_c: {
             type: Number,
@@ -107,6 +115,10 @@ const vitals = new mongoose.Schema(
         evse_state: {
             type: Number,
             required: true,
+        },
+        evse_not_ready_reasons: {
+            type: [String],
+            required: false,
         },
         current_alerts: {
             type: [String],
